@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class OnBoardingProvider extends ChangeNotifier {
+class LanguagesProvider extends ChangeNotifier {
   bool isClicked = true;
   String languageCode = 'en';
 

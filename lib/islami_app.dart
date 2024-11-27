@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/config/routes/routes_name.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/config/theme/app_theme.dart';
-import 'package:islami_app/features/on_boarding/provider/on_boarding_provider.dart';
+import 'package:islami_app/features/on_boarding/providers/languages_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'config/routes/app_routes.dart';
@@ -14,7 +14,7 @@ class IslamiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    OnBoardingProvider provider = Provider.of<OnBoardingProvider>(context);
+    LanguagesProvider provider = Provider.of<LanguagesProvider>(context);
     return ScreenUtilInit(
       designSize: const Size(430, 932),
       minTextAdapt: true,

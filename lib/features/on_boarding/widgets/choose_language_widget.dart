@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/config/theme/app_colors.dart';
 import 'package:islami_app/core/utils/app_assets.dart';
-import 'package:islami_app/features/on_boarding/provider/on_boarding_provider.dart';
+import 'package:islami_app/features/on_boarding/providers/languages_provider.dart';
 import 'package:provider/provider.dart';
 
 class ChooseLanguageWidget extends StatelessWidget {
@@ -17,7 +17,7 @@ class ChooseLanguageWidget extends StatelessWidget {
         border: Border.all(color: AppColors.gold, width: 2),
         borderRadius: BorderRadius.circular(10.r),
       ),
-      child: Consumer<OnBoardingProvider>(
+      child: Consumer<LanguagesProvider>(
         builder: (context, provider, child) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
