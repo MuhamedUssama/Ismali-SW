@@ -10,10 +10,4 @@ class OnBoardingProvider extends ChangeNotifier {
     languageCode = selectedLanguageCode;
     notifyListeners();
   }
-
-  // void changeLanguage(String selectedLanguageCode) async {
-  //   if (selectedLanguageCode == languageCode) return;
-  //   languageCode = selectedLanguageCode;
-  //   notifyListeners();
-  // }
 }

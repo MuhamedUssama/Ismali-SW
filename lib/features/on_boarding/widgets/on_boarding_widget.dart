@@ -3,18 +3,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islami_app/config/theme/app_text_styles.dart';
 import 'package:islami_app/core/utils/app_assets.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import 'choose_language_widget.dart';
 
 class OnBoardingWidget extends StatelessWidget {
   final double heightBetweenImageAndText;
   final double heightBetweenTwoTexts;
+  final Widget theLastWidget;
+  final String image;
+  final String title;
 
   const OnBoardingWidget({
     super.key,
     required this.heightBetweenImageAndText,
     required this.heightBetweenTwoTexts,
+    required this.theLastWidget,
+    required this.image,
+    required this.title,
   });
 
   @override
@@ -30,14 +33,17 @@ class OnBoardingWidget extends StatelessWidget {
           ],
         ),
         SizedBox(height: 27.h),
-        Image.asset(AppImages.onBoarding1, fit: BoxFit.cover),
+        Image.asset(image, fit: BoxFit.cover),
         SizedBox(height: heightBetweenImageAndText),
         Text(
-          AppLocalizations.of(context)!.chooseLanguage,
+          title,
           style: AppTextStyles.text24GoldBold,
         ),
         SizedBox(height: heightBetweenTwoTexts),
-        ChooseLanguageWidget(),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 48.w),
+          child: theLastWidget,
+        ),
       ],
     );
   }
