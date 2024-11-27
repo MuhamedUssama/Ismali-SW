@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/config/routes/routes_name.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/config/theme/app_theme.dart';
 
 import 'config/routes/app_routes.dart';
 
@@ -17,6 +18,7 @@ class IslamiApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         title: 'Islami App',
+        theme: AppTheme.themeMode,
         debugShowCheckedModeBanner: false,
         localizationsDelegates: const [
           AppLocalizations.delegate,
