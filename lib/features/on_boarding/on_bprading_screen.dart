@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'widgets/on_boarding_widget.dart';
 
 class OnBpradingScreen extends StatelessWidget {
   const OnBpradingScreen({super.key});
@@ -7,8 +10,17 @@ class OnBpradingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.islami),
+      body: SafeArea(
+        child: PageView(
+          children: [
+            OnBoardingWidget(
+              heightBetweenImageAndText: 55.75.h,
+              heightBetweenTwoTexts: 48.h,
+            ),
+            Container(color: Colors.blue),
+            Container(color: Colors.green),
+          ],
+        ),
       ),
     );
   }
