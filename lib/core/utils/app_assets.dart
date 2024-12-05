@@ -6,6 +6,7 @@ class AppImages {
   static const String onBoarding3 = '${_imagesPath}on_boarding_3.png';
   static const String onBoarding4 = '${_imagesPath}on_boarding_4.png';
   static const String onBoarding5 = '${_imagesPath}on_boarding_5.png';
+  static const String backGround = '${_imagesPath}background.png';
 }
 
 class AppIcons {
