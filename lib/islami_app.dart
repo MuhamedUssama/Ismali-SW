@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/config/routes/routes_name.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/config/theme/app_theme.dart';
+import 'package:islami_app/features/on_boarding/providers/languages_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'config/routes/app_routes.dart';
 
@@ -12,8 +14,9 @@ class IslamiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LanguagesProvider provider = Provider.of<LanguagesProvider>(context);
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(430, 932),
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
@@ -30,7 +33,7 @@ class IslamiApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        locale: const Locale("ar"),
+        locale: Locale(provider.languageCode),
         initialRoute: RoutesName.onBoarding,
         onGenerateRoute: (settings) => AppRoutes.onGenerate(settings),
       ),

@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
+import 'providers/on_boarding_provider.dart';
+import 'widgets/on_boarding_body.dart';
+import 'widgets/on_boarding_bottom_sheet_widget.dart';
 
 class OnBpradingScreen extends StatelessWidget {
   const OnBpradingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    OnBoardingProvider provider = Provider.of<OnBoardingProvider>(context);
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.islami),
-      ),
+      body: OnBoardingBody(provider: provider),
+      bottomSheet: OnBoardingBottomSheetWidget(provider: provider),
     );
   }
 }

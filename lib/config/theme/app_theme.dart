@@ -7,7 +7,7 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.black,
     appBarTheme: const AppBarTheme(
       backgroundColor: AppColors.black,
-      titleTextStyle: AppTextStyles.appBarTextStyle,
+      titleTextStyle: AppTextStyles.text20GoldBold,
       elevation: 0,
       centerTitle: true,
       iconTheme: IconThemeData(color: AppColors.gold),
