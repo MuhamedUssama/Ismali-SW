@@ -27,8 +27,8 @@ class ChooseLanguageWidget extends StatelessWidget {
                 height: 42.h,
                 decoration: BoxDecoration(
                   color: provider.isClicked
-                      ? AppColors.gold
-                      : AppColors.transparent,
+                      ? AppColors.transparent
+                      : AppColors.gold,
                   borderRadius: BorderRadius.circular(8.r),
                 ),
                 child: GestureDetector(
@@ -43,8 +43,8 @@ class ChooseLanguageWidget extends StatelessWidget {
                 height: 42.h,
                 decoration: BoxDecoration(
                   color: provider.isClicked
-                      ? AppColors.transparent
-                      : AppColors.gold,
+                      ? AppColors.gold
+                      : AppColors.transparent,
                   borderRadius: BorderRadius.circular(8.r),
                 ),
                 child: GestureDetector(

@@ -3,6 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/config/theme/app_colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/config/theme/app_text_styles.dart';
+import 'package:islami_app/core/cache/shared_preferences_helper.dart';
+import 'package:islami_app/core/utils/app_constants.dart';
+import 'package:islami_app/features/home/home_screen.dart';
 import 'package:islami_app/features/on_boarding/providers/on_boarding_provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -26,7 +29,7 @@ class OnBoardingBottomSheetWidget extends StatelessWidget {
                   ? const SizedBox(width: 50)
                   : TextButton(
                       onPressed: () {
-                        if (provider.dotIndex.value > 0) {
+                        if (value > 0) {
                           provider.dotIndex.value -= 1;
                           provider.pageController.animateToPage(
                             duration: const Duration(milliseconds: 600),
@@ -58,13 +61,25 @@ class OnBoardingBottomSheetWidget extends StatelessWidget {
                 },
               ),
               TextButton(
-                onPressed: () {
-                  if (provider.dotIndex.value < 4) {
+                onPressed: () async {
+                  if (value < 4) {
                     provider.dotIndex.value += 1;
                     provider.pageController.animateToPage(
                       duration: const Duration(milliseconds: 600),
                       curve: Curves.ease,
                       provider.dotIndex.value,
+                    );
+                  } else {
+                    await SharedPreferencesHelper.saveData(
+                      key: AppConstants.isOnBoardingSeen,
+                      value: true,
+                    );
+
+                    // ignore: use_build_context_synchronously
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ),
                     );
                   }
                 },
