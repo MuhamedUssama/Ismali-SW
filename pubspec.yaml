@@ -39,6 +39,10 @@ dependencies:
   shared_preferences: ^2.3.2
   provider: ^6.1.2
   flutter_native_splash: ^2.4.1
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +60,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -64,6 +69,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/icons/
+    - assets/svgs/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -77,11 +84,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: Janna-LT
+      fonts:
+        - asset: assets/fonts/Janna LT Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Janna LT Regular.ttf
+          weight: 400
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
