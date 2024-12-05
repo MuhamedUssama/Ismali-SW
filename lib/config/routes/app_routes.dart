@@ -18,7 +18,9 @@ class AppRoutes {
         );
 
       case RoutesName.homeScreen:
-        return MaterialPageRoute(builder: (context) => const HomeScreen());
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        );
 
       default:
         return MaterialPageRoute(builder: (context) => unDefinePageRoute());
