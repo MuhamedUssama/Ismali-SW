@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/features/home/home_screen.dart';
 import 'package:provider/provider.dart';
 
-import '../../features/home/home_provider.dart';
 import '../../features/on_boarding/on_boarding_screen.dart';
 import '../../features/on_boarding/providers/on_boarding_provider.dart';
 import 'routes_name.dart';
@@ -20,10 +19,7 @@ class AppRoutes {
 
       case RoutesName.homeScreen:
         return MaterialPageRoute(
-          builder: (context) => ChangeNotifierProvider(
-            create: (context) => HomeProvider(),
-            child: const HomeScreen(),
-          ),
+          builder: (context) => const HomeScreen(),
         );
 
       default:
