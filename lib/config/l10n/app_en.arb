@@ -11,5 +11,10 @@
   "holyQuranRadioDescribtion": "You can listen to the Holy Quran Radio through the application for free and easily",
   "next":"Next",
   "back": "Back",
-  "finish": "Finish"
+  "finish": "Finish",
+  "quran": "Quran",
+  "hadeth": "Hadeth",
+  "sebha": "Sebha",
+  "radio": "Radio",
+  "time": "Time"
 }
