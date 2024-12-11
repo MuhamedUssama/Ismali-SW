@@ -33,10 +33,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 30.h),
               const AppHeaderWidget(),
               SizedBox(height: 20.h),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 0.w),
-                child: provider.tabs[provider.currentIndex],
-              ),
+              provider.tabs[provider.currentIndex],
             ],
           ),
           bottomNavigationBar:

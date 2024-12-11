@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 import 'provider/radio_tab_provider.dart';
@@ -14,14 +13,33 @@ class RadioTab extends StatelessWidget {
       create: (context) => RadioTabProvider(),
       child: DefaultTabController(
         length: 2,
-        child: Column(
-          children: [
-            Consumer<RadioTabProvider>(
-              builder: (context, provider, child) {
-                return CustomTabbarWidget(provider: provider);
-              },
-            ),
-          ],
+        child: Expanded(
+          child: Column(
+            children: [
+              Consumer<RadioTabProvider>(
+                builder: (context, provider, child) {
+                  return Column(
+                    children: [
+                      CustomTabbarWidget(provider: provider),
+                    ],
+                  );
+                },
+              ),
+              const Expanded(
+                child: TabBarView(
+                  physics: NeverScrollableScrollPhysics(),
+                  children: [
+                    Center(
+                      child: Text("Haai 1"),
+                    ),
+                    Center(
+                      child: Text("Haai 2"),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
