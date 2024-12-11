@@ -18,6 +18,7 @@ class AppIcons {
   static const String sebha = '${_iconsPath}sebha_icon.png';
   static const String radio = '${_iconsPath}radio_icon.png';
   static const String time = '${_iconsPath}time_icon.png';
+  static const String searchIcon = '${_iconsPath}search_icon.png';
 }
 
 class AppSvgs {
