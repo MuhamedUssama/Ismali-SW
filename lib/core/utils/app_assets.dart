@@ -24,8 +24,5 @@ class AppIcons {
 class AppSvgs {
   static const String _svgPath = 'assets/svgs/';
   static const String islami = '${_svgPath}Islami.svg';
-  static const String onBoarding1 = '${_svgPath}welcome_1.svg';
-  static const String onBoarding2 = '${_svgPath}welcome_2.svg';
-  static const String onBoarding3 = '${_svgPath}welcome_3.svg';
-  static const String onBoarding4 = '${_svgPath}welcome_4.svg';
+  static const String ayatShape = '${_svgPath}ayat_shape.svg';
 }

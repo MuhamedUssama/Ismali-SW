@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage(AppImages.backGround),
             fit: BoxFit.cover,
-            opacity: 0.5,
+            opacity: 0.3,
           ),
         ),
         child: Scaffold(
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 30.h),
               const AppHeaderWidget(),
               SizedBox(height: 20.h),
-              provider.tabs[provider.currentIndex],
+              Expanded(child: provider.tabs[provider.currentIndex]),
             ],
           ),
           bottomNavigationBar:

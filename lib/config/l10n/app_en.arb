@@ -18,5 +18,7 @@
   "radio": "Radio",
   "time": "Time",
   "reciters": "Reciters",
-  "suraName": "Sura Name"
+  "suraName": "Sura Name",
+  "quranList": "Quran List",
+  "verses": "Verses"
 }
