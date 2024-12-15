@@ -18,13 +18,11 @@ class AppIcons {
   static const String sebha = '${_iconsPath}sebha_icon.png';
   static const String radio = '${_iconsPath}radio_icon.png';
   static const String time = '${_iconsPath}time_icon.png';
+  static const String searchIcon = '${_iconsPath}search_icon.png';
 }
 
 class AppSvgs {
   static const String _svgPath = 'assets/svgs/';
   static const String islami = '${_svgPath}Islami.svg';
-  static const String onBoarding1 = '${_svgPath}welcome_1.svg';
-  static const String onBoarding2 = '${_svgPath}welcome_2.svg';
-  static const String onBoarding3 = '${_svgPath}welcome_3.svg';
-  static const String onBoarding4 = '${_svgPath}welcome_4.svg';
+  static const String ayatShape = '${_svgPath}ayat_shape.svg';
 }
