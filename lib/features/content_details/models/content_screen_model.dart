@@ -1,10 +1,12 @@
 class ContentScreenModel {
-  String title;
+  String titleInArabic;
+  String titleInEnglish;
   String fileName;
   bool isQuran;
 
   ContentScreenModel({
-    required this.title,
+    required this.titleInArabic,
+    required this.titleInEnglish,
     required this.fileName,
     required this.isQuran,
   });

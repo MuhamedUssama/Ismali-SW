@@ -22,7 +22,8 @@ class SuraWidget extends StatelessWidget {
             builder: (context) {
               return ContentDetailsScreen(
                 contentScreenModel: ContentScreenModel(
-                  title: quranModel.titleInArabic,
+                  titleInArabic: quranModel.titleInArabic,
+                  titleInEnglish: quranModel.titleInEnglish,
                   fileName: "${quranModel.id}.txt",
                   isQuran: true,
                 ),

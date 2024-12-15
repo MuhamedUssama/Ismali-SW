@@ -28,7 +28,8 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => ContentDetailsScreen(
             contentScreenModel: ContentScreenModel(
-              title: "",
+              titleInArabic: "",
+              titleInEnglish: "",
               fileName: "",
               isQuran: true,
             ),
