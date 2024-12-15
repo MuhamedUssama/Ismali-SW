@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/core/utils/app_constants.dart';
+import 'package:islami_app/features/home/tabs/quran_tab/models/quran_model.dart';
 
 class QuranTabProvider extends ChangeNotifier {
   TextEditingController searchController = TextEditingController();
 
   bool isTyping = false;
+  List<QuranModel> fullQuranList = QuranModel.quran;
 
-  List<String> allSuraName = AppConstants.soraNames;
-  List<String> allAyat = AppConstants.soraAyatCount;
-
-  List<String> filteredSuraName = [];
+  List<QuranModel> filteredQuranList = [];
 
   @override
   void dispose() {
@@ -20,8 +18,10 @@ class QuranTabProvider extends ChangeNotifier {
   void addFilteredSuraNamesToFilteredList(String searchedSuraName) {
     isTyping = true;
 
-    filteredSuraName = allSuraName
-        .where((suraName) => suraName.toLowerCase().contains(searchedSuraName))
+    filteredQuranList = fullQuranList
+        .where(
+          (sura) => sura.titleInArabic.toLowerCase().contains(searchedSuraName),
+        )
         .toList();
 
     notifyListeners();

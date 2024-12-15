@@ -27,13 +27,9 @@ class QuranListWidget extends StatelessWidget {
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return SuraWidget(
-                  suraNumber: index + 1,
-                  suraTitle: provider.filteredSuraName.isEmpty
-                      ? provider.allSuraName[index]
-                      : provider.filteredSuraName[index],
-                  suraVerses: provider.filteredSuraName.isEmpty
-                      ? provider.allAyat[index]
-                      : "",
+                  quranModel: provider.filteredQuranList.isEmpty
+                      ? provider.fullQuranList[index]
+                      : provider.filteredQuranList[index],
                 );
               },
               separatorBuilder: (context, index) {
@@ -44,9 +40,9 @@ class QuranListWidget extends StatelessWidget {
                   height: 20.h,
                 );
               },
-              itemCount: provider.filteredSuraName.isEmpty
-                  ? provider.allAyat.length
-                  : provider.filteredSuraName.length,
+              itemCount: provider.filteredQuranList.isEmpty
+                  ? provider.fullQuranList.length
+                  : provider.filteredQuranList.length,
             ),
           )
         ],
