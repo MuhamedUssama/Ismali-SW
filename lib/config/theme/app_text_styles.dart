@@ -37,6 +37,13 @@ class AppTextStyles {
     fontFamily: 'Janna-LT',
   );
 
+  static const TextStyle text20BlackBold = TextStyle(
+    fontSize: 20,
+    color: AppColors.black,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Janna-LT',
+  );
+
   static const TextStyle text20GoldBold = TextStyle(
     fontSize: 20,
     color: AppColors.gold,

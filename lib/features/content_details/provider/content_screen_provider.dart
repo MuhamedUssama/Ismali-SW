@@ -5,12 +5,18 @@ import '../models/content_screen_model.dart';
 
 class ContentScreenProvider extends ChangeNotifier {
   final ContentScreenModel contentScreenModel;
+  ContentScreenProvider({required this.contentScreenModel});
 
   String fileContent = '';
-
   List<String> fileLines = [];
 
-  ContentScreenProvider({required this.contentScreenModel});
+  int? tappedAyaIndex;
+
+  void onAyaClicked(int index) {
+    tappedAyaIndex = index;
+
+    notifyListeners();
+  }
 
   void readContent() async {
     if (contentScreenModel.isQuran) {
@@ -18,12 +24,6 @@ class ContentScreenProvider extends ChangeNotifier {
           .loadString('assets/quran/${contentScreenModel.fileName}');
 
       fileLines = file.split("\n");
-      // for (int i = 0; i < fileLines.length; i++) {
-      //   fileLines[i] += "(${i + 1})  ";
-      // }
-
-      // fileContent = fileLines.join();
-      // fileContent = fileLines;
     } else {
       String file = await rootBundle
           .loadString('assets/hadeth/${contentScreenModel.fileName}');

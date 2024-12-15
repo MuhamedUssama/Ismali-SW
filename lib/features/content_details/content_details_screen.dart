@@ -44,9 +44,15 @@ class ContentDetailsScreen extends StatelessWidget {
                           physics: const NeverScrollableScrollPhysics(),
                           itemCount: provider.fileLines.length,
                           itemBuilder: (context, index) {
-                            return CustomAyaWidget(
-                              ayaNumber: index + 1,
-                              ayaText: provider.fileLines[index],
+                            return GestureDetector(
+                              onTap: () {
+                                provider.onAyaClicked(index);
+                              },
+                              child: CustomAyaWidget(
+                                ayaNumber: index + 1,
+                                provider: provider,
+                                ayaText: provider.fileLines[index],
+                              ),
                             );
                           },
                         );
