@@ -8,7 +8,13 @@ import 'package:islami_app/features/home/tabs/quran_tab/provider/quran_tab_provi
 
 class CustomSearchWidget extends StatelessWidget {
   final QuranTabProvider provider;
-  const CustomSearchWidget({super.key, required this.provider});
+  final Function search;
+
+  const CustomSearchWidget({
+    super.key,
+    required this.provider,
+    required this.search,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +22,9 @@ class CustomSearchWidget extends StatelessWidget {
       cursorColor: AppColors.gold,
       style: AppTextStyles.text16WhiteBold,
       controller: provider.searchController,
+      onChanged: (value) {
+        search(value);
+      },
       decoration: InputDecoration(
         filled: true,
         fillColor: AppColors.black.withOpacity(0.7),
