@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/features/home/home_screen.dart';
 import 'package:provider/provider.dart';
 
+import '../../features/content_details/content_details_screen.dart';
+import '../../features/content_details/models/content_screen_model.dart';
 import '../../features/on_boarding/on_boarding_screen.dart';
 import '../../features/on_boarding/providers/on_boarding_provider.dart';
 import 'routes_name.dart';
@@ -20,6 +22,18 @@ class AppRoutes {
       case RoutesName.homeScreen:
         return MaterialPageRoute(
           builder: (context) => const HomeScreen(),
+        );
+
+      case RoutesName.contentScreen:
+        return MaterialPageRoute(
+          builder: (context) => ContentDetailsScreen(
+            contentScreenModel: ContentScreenModel(
+              titleInArabic: "",
+              titleInEnglish: "",
+              fileName: "",
+              isQuran: true,
+            ),
+          ),
         );
 
       default:
