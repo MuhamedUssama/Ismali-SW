@@ -14,6 +14,9 @@ class AppImages {
       '${_imagesPath}screenDetailsRightImage.png';
   static const String screenDetailsBottomImage =
       '${_imagesPath}screenDetailsBottomImage.png';
+
+  static const String sebhaBody = '${_imagesPath}sebhaBody.png';
+  static const String sebhaTail = '${_imagesPath}sebhaTail.png';
 }
 
 class AppIcons {
