@@ -17,6 +17,8 @@ class AppImages {
 
   static const String sebhaBody = '${_imagesPath}sebhaBody.png';
   static const String sebhaTail = '${_imagesPath}sebhaTail.png';
+  static const String mosques = '${_imagesPath}mosques.png';
+  static const String soundWave = '${_imagesPath}soundWave.png';
 }
 
 class AppIcons {
