@@ -19,8 +19,8 @@ class SebhaTab extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              AppLocalizations.of(context)!.bearishDescribtion,
+            const Text(
+              "سَبِّحِ اسْمَ رَبِّكَ الأعلى",
               style: AppTextStyles.text36WhiteBold,
             ),
             SizedBox(height: 16.h),
