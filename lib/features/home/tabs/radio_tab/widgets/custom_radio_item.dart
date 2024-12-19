@@ -9,7 +9,8 @@ import 'package:provider/provider.dart';
 
 class CustomRadioItem extends StatelessWidget {
   final Radios radio;
-  const CustomRadioItem({super.key, required this.radio});
+  final int index;
+  const CustomRadioItem({super.key, required this.radio, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class CustomRadioItem extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           opacity: 0.7,
           image: AssetImage(
-            provider.isPlayed ? AppImages.soundWave : AppImages.mosques,
+            provider.isPlaying(index) ? AppImages.soundWave : AppImages.mosques,
           ),
         ),
       ),
@@ -48,9 +49,15 @@ class CustomRadioItem extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () async {
+                  if (provider.isPlaying(index)) {
+                    await provider.puaseAudio(index);
+                  } else {
+                    await provider.playAudio(radio.url!, index);
+                  }
+                },
                 icon: Icon(
-                  provider.isPlayed
+                  provider.isPlaying(index)
                       ? Icons.pause_rounded
                       : Icons.play_arrow_rounded,
                   color: AppColors.black,
@@ -58,9 +65,11 @@ class CustomRadioItem extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () async {
+                  await provider.toggleMute(index);
+                },
                 icon: Icon(
-                  provider.isMute
+                  provider.isMute(index)
                       ? Icons.volume_off_rounded
                       : Icons.volume_up_rounded,
                   color: AppColors.black,

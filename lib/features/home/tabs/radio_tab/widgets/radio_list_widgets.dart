@@ -24,7 +24,10 @@ class RadioListWidgets extends StatelessWidget {
                 EdgeInsetsDirectional.only(start: 20.w, end: 20.w, top: 16.h),
             itemCount: radios.length,
             itemBuilder: (context, index) {
-              return CustomRadioItem(radio: radios[index]);
+              return CustomRadioItem(
+                radio: radios[index],
+                index: index,
+              );
             },
           );
         } else {
