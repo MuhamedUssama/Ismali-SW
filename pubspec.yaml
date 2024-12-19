@@ -44,6 +44,8 @@ dependencies:
   intl: any
   smooth_page_indicator: ^1.2.0+3
   carousel_slider: ^5.0.0
+  audioplayers: ^6.1.0
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
