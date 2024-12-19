@@ -5,6 +5,7 @@ import 'package:islami_app/config/theme/app_text_styles.dart';
 import 'package:islami_app/core/utils/app_assets.dart';
 import 'package:islami_app/features/home/tabs/radio_tab/models/radio/radios_model.dart';
 import 'package:islami_app/features/home/tabs/radio_tab/provider/radio_tab_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class CustomRadioItem extends StatelessWidget {
@@ -34,7 +35,7 @@ class CustomRadioItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Radio ${radio.name ?? ""}",
+            "${AppLocalizations.of(context)!.radio} ${radio.name ?? ""}",
             style: AppTextStyles.text20BlackBold,
           ),
           Row(
