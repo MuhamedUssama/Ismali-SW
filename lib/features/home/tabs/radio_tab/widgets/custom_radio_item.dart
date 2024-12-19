@@ -34,7 +34,7 @@ class CustomRadioItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            radio.name ?? "",
+            "Radio ${radio.name ?? ""}",
             style: AppTextStyles.text20BlackBold,
           ),
           Row(
