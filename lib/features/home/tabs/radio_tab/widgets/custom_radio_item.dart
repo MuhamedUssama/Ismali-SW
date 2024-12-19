@@ -3,11 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/config/theme/app_colors.dart';
 import 'package:islami_app/config/theme/app_text_styles.dart';
 import 'package:islami_app/core/utils/app_assets.dart';
+import 'package:islami_app/features/home/tabs/radio_tab/models/radio/radios_model.dart';
 import 'package:islami_app/features/home/tabs/radio_tab/provider/radio_tab_provider.dart';
 import 'package:provider/provider.dart';
 
 class CustomRadioItem extends StatelessWidget {
-  const CustomRadioItem({super.key});
+  final Radios radio;
+  const CustomRadioItem({super.key, required this.radio});
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +32,8 @@ class CustomRadioItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            "إبراهيم الأخضر",
+          Text(
+            radio.name ?? "",
             style: AppTextStyles.text20BlackBold,
           ),
           Row(
