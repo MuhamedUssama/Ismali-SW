@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'provider/radio_tab_provider.dart';
 import 'widgets/custom_tabbar_widget.dart';
 import 'widgets/radio_list_widgets.dart';
+import 'widgets/reciters_list_widget.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
@@ -30,9 +31,7 @@ class RadioTab extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 children: [
                   RadioListWidgets(),
-                  Center(
-                    child: Text("Haai 2"),
-                  ),
+                  RecitersListWidget(),
                 ],
               ),
             ),
