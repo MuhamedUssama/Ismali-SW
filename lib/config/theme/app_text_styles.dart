@@ -71,4 +71,11 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     fontFamily: 'Janna-LT',
   );
+
+  static const TextStyle text24BlackBold = TextStyle(
+    fontSize: 24,
+    color: AppColors.black,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Janna-LT',
+  );
 }

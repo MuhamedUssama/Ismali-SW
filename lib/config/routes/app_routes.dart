@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/features/hadeeth_details/hadeeth_details_screen.dart';
+import 'package:islami_app/features/hadeeth_details/models/hadeeth_details_model.dart';
 import 'package:islami_app/features/home/home_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -32,6 +34,17 @@ class AppRoutes {
               titleInEnglish: "",
               fileName: "",
               isQuran: true,
+            ),
+          ),
+        );
+
+      case RoutesName.hadeethDetails:
+        return MaterialPageRoute(
+          builder: (context) => HadeethDetailsScreen(
+            hadeethModel: HadeethDetailsModel(
+              fileName: "",
+              titleInArabic: "",
+              titleInEnglish: "",
             ),
           ),
         );
