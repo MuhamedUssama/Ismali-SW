@@ -20,5 +20,8 @@
   "reciters": "Reciters",
   "suraName": "Sura Name",
   "quranList": "Quran List",
-  "verses": "Verses"
+  "verses": "Verses",
+  "azkar": "Azkar",
+  "eveningAzkar": "Evening Azkar",
+  "morningAzkar": "Morning Azkar"
 }

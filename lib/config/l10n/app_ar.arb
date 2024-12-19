@@ -20,5 +20,8 @@
   "reciters": "القراء",
   "suraName": "اسم السورة",
   "quranList": "قائمة القرءان",
-  "verses": "آيات"
+  "verses": "آيات",
+  "azkar": "اذكار",
+    "eveningAzkar": "اذكار المساء",
+  "morningAzkar": "اذكار الصباح"
 }
