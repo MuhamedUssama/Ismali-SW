@@ -20,6 +20,9 @@ class AppImages {
   static const String mosques = '${_imagesPath}mosques.png';
   static const String soundWave = '${_imagesPath}soundWave.png';
   static const String hadethCard = '${_imagesPath}hadethCard.png';
+  static const String timeCard = '${_imagesPath}timeCard.png';
+  static const String morningAzkar = '${_imagesPath}morningAzkar.png';
+  static const String eveningAzkar = '${_imagesPath}eveningAzkar.png';
 }
 
 class AppIcons {
